@@ -7,6 +7,7 @@ import Tokenomics from "@/components/Tokenomics";
 import { Roadmap } from '@/components/Roadmap';
 import FAQ from "@/components/FAQ";
 
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -18,6 +19,7 @@ export default function Home() {
       <Tokenomics />
       <Roadmap />
       <FAQ />
+
     </div>
   );
 }

@@ -22,6 +22,16 @@ function cn(...classes: (string | boolean | undefined)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+interface AnimationConfig {
+  type?: 'spring' | 'tween';
+  duration?: number;
+  damping?: number;
+  stiffness?: number;
+  mass?: number;
+  velocity?: number;
+  delay?: number;
+}
+
 interface EnhancedTextProps {
   texts: string[];
   // Rotation configuration
@@ -35,10 +45,10 @@ interface EnhancedTextProps {
   highlightPadding?: number;
   cornerSize?: number;
   // Animation configuration
-  transition?: any;
-  initial?: any;
-  animate?: any;
-  exit?: any;
+  transition?: AnimationConfig;
+  initial?: Record<string, string | number>;
+  animate?: Record<string, string | number>;
+  exit?: Record<string, string | number>;
   // Style classNames
   className?: string;
   textClassName?: string;

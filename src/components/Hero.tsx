@@ -4,7 +4,6 @@ import Image from 'next/image';
 import EnhancedText from './EnhancedText';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { cn } from '@/lib/utils';
 
 export default function Hero() {
   const cube1Ref = useRef<HTMLDivElement>(null);

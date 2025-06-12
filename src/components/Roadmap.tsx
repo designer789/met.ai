@@ -56,7 +56,6 @@ const phases: Phase[] = [
 ];
 
 export const Roadmap: FC = () => {
-  const [activePhase, setActivePhase] = useState<number>(0);
   const phaseRefs = useRef<(HTMLDivElement | null)[]>([]);
   const sectionRef = useRef<HTMLDivElement>(null);
   const gridImageRef = useRef<HTMLDivElement>(null);
@@ -119,7 +118,6 @@ export const Roadmap: FC = () => {
               duration: 0.6,
               ease: 'power2.out',
             });
-            setActivePhase(index);
           },
           onLeave: () => {
             gsap.to(phase, {
@@ -141,7 +139,6 @@ export const Roadmap: FC = () => {
               duration: 0.6,
               ease: 'power2.out',
             });
-            setActivePhase(index);
           },
           onLeaveBack: () => {
             gsap.to(phase, {

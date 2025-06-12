@@ -21,7 +21,7 @@ body {
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    /* Remove scroll-behavior as we're using Lenis */
   }
 }
 

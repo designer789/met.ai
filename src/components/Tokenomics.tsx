@@ -2,19 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { FC, useState, useEffect, useRef } from "react";
-import { 
-  Coins,
-  Users,
-  Code2,
-  Lock,
-  Megaphone,
-  UsersRound,
-  Zap,
-  Vote,
-  Wallet,
-  ArrowRight,
-  ChevronDown
-} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 interface AllocationItemProps {
   label: string;
