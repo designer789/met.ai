@@ -1,6 +1,6 @@
 'use client';
 
-import { type FC, useEffect, useRef, useState } from 'react';
+import { type FC, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { ChevronRight, ArrowLeft } from 'lucide-react';
 import gsap from 'gsap';
