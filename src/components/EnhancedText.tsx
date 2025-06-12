@@ -7,9 +7,11 @@ import {
   useRef,
   useState,
   useLayoutEffect,
+  type FC,
 } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { gsap } from "gsap";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
 
 // Register any GSAP plugins if needed
 if (typeof window !== "undefined") {
@@ -43,7 +45,14 @@ interface EnhancedTextProps {
   highlightClassName?: string;
 }
 
-const EnhancedText = forwardRef<HTMLDivElement, EnhancedTextProps>((props, ref) => {
+interface SplitTextInstance {
+  chars: HTMLElement[];
+  words: HTMLElement[];
+  lines: HTMLElement[];
+  revert: () => void;
+}
+
+const EnhancedText: FC<EnhancedTextProps> = forwardRef<HTMLDivElement, EnhancedTextProps>((props, ref) => {
   // Destructure all props with defaults
   const {
     texts,
@@ -264,6 +273,33 @@ const EnhancedText = forwardRef<HTMLDivElement, EnhancedTextProps>((props, ref) 
   const setTextRef = (el: HTMLDivElement | null, index: number) => {
     textRefs.current[index] = el;
   };
+
+  useEffect(() => {
+    if (!textRefs.current[currentTextIndex]) return;
+
+    const splitText = new SplitText(textRefs.current[currentTextIndex], {
+      type: 'chars,words,lines',
+    }) as unknown as SplitTextInstance;
+
+    gsap.fromTo(
+      splitText.chars,
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.02,
+        ease: 'power2.out',
+      }
+    );
+
+    return () => {
+      splitText.revert();
+    };
+  }, [currentTextIndex, texts]);
 
   return (
     <div className={cn("relative overflow-hidden", className)} ref={ref || containerRef} {...rest}>

@@ -1,10 +1,10 @@
 'use client';
 
-import { type FC, useEffect } from 'react';
-import Lenis from 'lenis';
+import { type FC, type ReactNode, useEffect } from 'react';
+import Lenis from '@studio-freight/lenis';
 
 interface LenisProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const LenisProvider: FC<LenisProviderProps> = ({ children }) => {
