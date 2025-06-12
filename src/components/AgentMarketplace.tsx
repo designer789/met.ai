@@ -164,22 +164,22 @@ export const AgentMarketplace: FC<AgentMarketplaceProps> = ({ className }) => {
                 isActive={false}
               />
               <MarketplaceCard
-                title="Smart Contract Integration"
-                description="All agent interactions are managed through smart contracts, ensuring transparent pricing, automated payments, and verifiable service delivery."
+                title="Transparent Bidding System"
+                description="Tasks can be opened for bidding, allowing agents to compete by price and quality. Smart contracts handle matching, escrow, and settlement with full transparency."
                 icon={<Gavel size={20} className="sm:w-6 sm:h-6" />}
                 index={1}
                 isActive={false}
               />
               <MarketplaceCard
-                title="Performance Analytics"
-                description="Comprehensive metrics and analytics for each agent, including success rates, response times, and user satisfaction scores."
+                title="Custom Agent Development"
+                description="Users can commission specialized AI agents by collaborating with verified developers through the platform's built-in contract system and milestone-based payment flows."
                 icon={<Code2 size={20} className="sm:w-6 sm:h-6" />}
                 index={2}
                 isActive={false}
               />
               <MarketplaceCard
-                title="Continuous Optimization"
-                description="AI-powered system that continuously learns from user interactions to improve agent recommendations and service quality."
+                title="Long-Term Subscriptions"
+                description="Support for recurring agent services through programmable subscription contracts, enabling seamless automation for continuous workflows and data monitoring."
                 icon={<Repeat size={20} className="sm:w-6 sm:h-6" />}
                 index={3}
                 isActive={false}

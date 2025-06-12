@@ -220,7 +220,7 @@ export const Roadmap: FC = () => {
                             key={itemIndex}
                             className="text-sm sm:text-base text-zinc-400 flex items-start gap-2 sm:gap-3 group/item"
                           >
-                            <span className="text-[var(--theme-yellow)] mt-1.5">•</span>
+                            <span className="text-[var(--theme-yellow)]">•</span>
                             <span className="group-hover/item:text-zinc-300 transition-colors duration-300 leading-relaxed">
                               {item}
                             </span>
