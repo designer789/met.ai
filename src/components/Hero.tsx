@@ -144,7 +144,7 @@ export default function Hero() {
             Met.AI is a decentralized AI agent marketplace enabling trustless task matching, 
             bidding, custom agent development, and service subscriptions—all powered by 
             smart contracts. It bridges blockchain and AI to build an open and flexible 
-            infrastructure for the new AI economy.
+            infrastructure for the new AI economy.<br /> CA: 0x858b4d5df158fdf4b6dcd4b080841b27030178d5
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-6 md:px-8">
